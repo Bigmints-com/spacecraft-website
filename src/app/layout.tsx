@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -37,6 +38,11 @@ export default function RootLayout({
     <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
+        <Script
+          src="https://waitlist.saveaday.ai/embed/c371c7b63bae987017fc5fb5.js"
+          data-waitlist-token="c371c7b63bae987017fc5fb5"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

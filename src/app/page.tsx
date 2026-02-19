@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import ScrollVideo from "@/components/scroll-video";
+import WaitlistButton from "@/components/waitlist-button";
 import Image from "next/image";
 import {
   Card,
@@ -17,7 +18,6 @@ import {
   Workflow,
   Zap,
   CheckCircle2,
-  ArrowRight,
   Github,
   LucideIcon
 } from "lucide-react";
@@ -51,9 +51,7 @@ export default function Home() {
                 GitHub
               </a>
             </Button>
-            <Button size="sm" className="shadow-lg shadow-primary/20" asChild>
-              <a href="#get-started">Get Started</a>
-            </Button>
+            <WaitlistButton variant="nav" />
           </div>
         </div>
       </nav>
@@ -80,9 +78,7 @@ export default function Home() {
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row mt-4">
-          <Button size="lg" className="h-12 px-8 text-base bg-primary hover:bg-primary/90 text-white shadow-[0_0_30px_rgba(45,170,184,0.3)] transition-all hover:scale-105 active:scale-95">
-            Get Started Free <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <WaitlistButton variant="hero" />
           <Button size="lg" variant="outline" className="h-12 px-8 text-base border-white/10 bg-transparent hover:bg-white/5 text-white" asChild>
             <a
               href="https://github.com/Bigmints-com/spacecraft"
@@ -200,7 +196,7 @@ export default function Home() {
             Stop waiting weeks for prototypes. Give your product and design teams the toolkit that ships validated ideas faster.
           </p>
           <div className="mt-12 flex justify-center gap-4">
-            <Button size="lg" className="px-10 h-14 text-lg shadow-xl shadow-primary/20 transition-transform hover:scale-105">Get Started Free</Button>
+            <WaitlistButton variant="cta" />
           </div>
         </div>
       </section>
