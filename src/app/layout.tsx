@@ -8,9 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Spacecraft — AI-Powered Prototyping",
+  title: "Spacecraft — Backlog to Figma-Ready Prototypes",
   description:
-    "Turn product ideas into interactive prototypes in seconds. AI-powered screen generation, Figma sync, and design system management — all in one tool.",
+    "Turn your product backlog into testable prototypes and high-quality Figma designs — using your brand's design system. Accelerate design and product teams.",
   metadataBase: new URL("https://spacecraft.bigmints.com"),
   openGraph: {
     title: "Spacecraft — AI-Powered Prototyping",
@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
       </body>
