@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+
 import ScrollVideo from "@/components/scroll-video";
 import WaitlistButton from "@/components/waitlist-button";
 import Image from "next/image";
@@ -18,7 +18,6 @@ import {
   Workflow,
   Zap,
   CheckCircle2,
-  Github,
   LucideIcon
 } from "lucide-react";
 
@@ -42,15 +41,6 @@ export default function Home() {
             <span className="font-bold tracking-tight text-lg text-white">Spacecraft</span>
           </div>
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm" className="hidden sm:inline-flex" asChild>
-              <a
-                href="https://github.com/Bigmints-com/spacecraft"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-            </Button>
             <WaitlistButton variant="nav" />
           </div>
         </div>
@@ -79,16 +69,6 @@ export default function Home() {
 
         <div className="flex flex-col gap-4 sm:flex-row mt-4">
           <WaitlistButton variant="hero" />
-          <Button size="lg" variant="outline" className="h-12 px-8 text-base border-white/10 bg-transparent hover:bg-white/5 text-white" asChild>
-            <a
-              href="https://github.com/Bigmints-com/spacecraft"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Github className="mr-2 h-4 w-4" />
-              View on GitHub
-            </a>
-          </Button>
         </div>
 
         <ScrollVideo />
@@ -219,7 +199,7 @@ export default function Home() {
           <div className="flex gap-8 font-medium">
             <a href="#" className="hover:text-primary transition-colors">Privacy</a>
             <a href="#" className="hover:text-primary transition-colors">Terms</a>
-            <a href="#" className="hover:text-primary transition-colors">GitHub</a>
+
           </div>
         </div>
       </footer>
