@@ -33,12 +33,7 @@ export default function ScrollVideo() {
             const maxScale = 1.0;
             const scale = minScale + (maxScale - minScale) * bellProgress;
 
-            // Border radius from 24px to 0px
-            const maxRadius = 24;
-            const borderRadius = maxRadius * (1 - bellProgress);
-
             container.style.transform = `scale(${scale})`;
-            container.style.borderRadius = `${borderRadius}px`;
         };
 
         window.addEventListener("scroll", handleScroll, { passive: true });
@@ -51,8 +46,8 @@ export default function ScrollVideo() {
         <div className="mt-16 w-full px-4 sm:px-0">
             <div
                 ref={containerRef}
-                className="overflow-hidden transition-[border-radius] duration-75 will-change-transform"
-                style={{ transform: "scale(0.85)", borderRadius: "24px" }}
+                className="overflow-hidden rounded-2xl will-change-transform"
+                style={{ transform: "scale(0.85)" }}
             >
                 <video
                     ref={videoRef}
