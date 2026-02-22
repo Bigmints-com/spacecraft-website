@@ -1,5 +1,5 @@
 
-import ScrollVideo from "@/components/scroll-video";
+import RoiCalculator from "@/components/roi-calculator";
 import WaitlistButton from "@/components/waitlist-button";
 import Image from "next/image";
 import {
@@ -70,9 +70,10 @@ export default function Home() {
         <div className="flex flex-col gap-4 sm:flex-row mt-4">
           <WaitlistButton variant="hero" />
         </div>
-
-        <ScrollVideo />
       </section>
+
+      {/* ── ROI Calculator ── */}
+      <RoiCalculator />
 
       {/* ── Social Proof / Metrics ── */}
       <section className="w-full py-20 border-t border-white/5">
