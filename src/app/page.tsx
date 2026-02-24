@@ -1,4 +1,5 @@
 
+import AnimatedPipeline from "@/components/animated-pipeline";
 import RoiCalculator from "@/components/roi-calculator";
 import WaitlistButton from "@/components/waitlist-button";
 import Image from "next/image";
@@ -72,6 +73,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Pipeline Illustration ── */}
+      <AnimatedPipeline />
+
       {/* ── ROI Calculator ── */}
       <RoiCalculator />
 
@@ -136,34 +140,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── How it Works Step List ── */}
-      <section className="py-24 lg:py-32 border-t border-white/5">
-        <div className="container mx-auto px-4 sm:px-8">
-          <div className="mb-20 text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">How it Works</h2>
-            <p className="text-muted-foreground text-lg">Three simple steps to accelerate your workflow.</p>
-          </div>
 
-          <div className="mx-auto max-w-3xl space-y-16">
-            {[
-              { step: "01", title: "Describe", desc: "Paste your user story or feature brief. Spacecraft understands product context." },
-              { step: "02", title: "Generate", desc: "AI builds interactive prototypes and high-fidelity Figma screens using your system." },
-              { step: "03", title: "Ship", desc: "Hand off polished Figma files to designers and testable prototypes to stakeholders." }
-            ].map((item, i) => (
-              <div key={i} className="flex gap-6 sm:gap-10 relative">
-                {i !== 2 && <div className="absolute left-6 top-16 bottom-[-64px] w-px bg-border/50 border-l border-dashed border-muted-foreground/30"></div>}
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 font-bold text-xl text-primary shadow-sm z-10">
-                  {item.step}
-                </div>
-                <div className="pt-2">
-                  <h3 className="text-2xl font-bold text-foreground">{item.title}</h3>
-                  <p className="mt-3 text-muted-foreground text-lg leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── CTA Section ── */}
       <section className="container mx-auto px-4 py-24 text-center sm:px-8 lg:py-32">
